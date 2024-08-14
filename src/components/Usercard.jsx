@@ -5,30 +5,31 @@ import phoneIcon from "../../public/phone-call-svgrepo-com.svg"
 import emailIcon from "../../public/email-svgrepo-com.svg"
 
 import IconButton from "./IconButton"
-import Button from "./Button"
 
-// eslint-disable-next-line react/prop-types
+// This component displays user info as a card-like element 
 const Usercard = ({ className, userProps, setUserProps }) => {
-    const [editMode, setEditMode] = useState(false)
-    
-    // eslint-disable-next-line react/prop-types
-    const {name, imageUrl, phoneNumber, country, city, email} = userProps
-    // Ideoita:
-    // pieni maan lippu
-    // pieni svg-puhelinikoni
-    // pieni location-ikoni "neula kartalla"
 
-    // Allow saving changes with spacebar
+    // Destructure user info
+    const {name, imageUrl, phoneNumber, country, city, email} = userProps
+
+    // State for toggling edit mode
+    const [editMode, setEditMode] = useState(false)
+
+    // Allow saving changes with Enter
     const handleKeydown = (e)=> {
         if(e.key === 'Enter') {
             setEditMode(!editMode)
         }
     }
 
+    // Toggle edit mode
+    const handleClick = () => setEditMode(!editMode)
+
+    // Conditional rendering based on edit mode
     if(editMode){
         return (
             <div className={className}>
-                <form className="user-edit-form" onKeyDown={handleKeydown} onSubmit={() => {}}>
+                <form className="user-edit-form" onKeyDown={handleKeydown}>
                     <img src={imageUrl}></img>
                     <div>Name:&nbsp;
                         <input type="text" value={name} onChange={(e) => setUserProps({ ...userProps, name: e.target.value })} />
@@ -45,7 +46,7 @@ const Usercard = ({ className, userProps, setUserProps }) => {
                     <div>Email:&nbsp;
                         <input type="text" value={email} onChange={(e) => setUserProps({ ...userProps, email: e.target.value })} />
                     </div>
-                    <IconButton handleClick={() => setEditMode(!editMode)} text="Save" icon={penIcon} id="save" />
+                    <IconButton handleClick={handleClick} text="Save" icon={penIcon} id="save" />
                 </form>
             </div>
         )
@@ -54,12 +55,11 @@ const Usercard = ({ className, userProps, setUserProps }) => {
         return(
             <div className={className}>
                 <img src={imageUrl}></img>
-                <IconButton handleClick={() => setEditMode(!editMode)} text="Edit" icon={penIcon} id="edit" />
+                <IconButton handleClick={handleClick} text="Edit" icon={penIcon} id="edit" />
                 <h2>{name}</h2>
                 <div className="location">{city}, {country}</div>
                 <div><img src={phoneIcon} className="phone-icon" />&nbsp;{phoneNumber}</div>
                 <div><img src={emailIcon} className="email-icon" />&nbsp;{email}</div>
-                
             </div>
         )
     }

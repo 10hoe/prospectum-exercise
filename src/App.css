@@ -55,6 +55,7 @@ body {
     float: right;
     border: none;
     background-color: #ffffff;
+    border-radius: 4px;
  }
 
  .icon-button:hover {

@@ -9,7 +9,7 @@ import './App.css'
 
 function App() {
 
-  // A state that stores the current user information
+  // A state that stores current user information
   const [userProps, setUserProps] = useState({
     name: "",
     imageUrl: placeHolderImage,
@@ -19,6 +19,7 @@ function App() {
     email: "",
   })
 
+  // Retrieve the random user data
   const userDataHook = () => {
 
     const getData = async () => {

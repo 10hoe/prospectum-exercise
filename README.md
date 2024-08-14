@@ -1,8 +1,24 @@
-# React + Vite
+# Tech assignment Prospectum Oy
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+GOAL:
 
-Currently, two official plugins are available:
+Application for user’s profile page with the ability to edit the 
+user’s data.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+ASSIGNMENT:
+
+Write an application that fetches a random fake user’s data from the 
+RandomUser API.
+API URL -> GET https://randomuser.me/api/
+Store the response data in state and display the following 
+information from the response: 
+Name, Picture, Phone number, Country, City and Email. 
+Add functionality to edit the displayed user’s data. 
+
+## To run the app
+```
+git clone https://github.com/10hoe/prospectum-exercise.git
+cd prospectum-exercise
+npm i
+npm run dev
+```
