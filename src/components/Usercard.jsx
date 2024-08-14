@@ -42,7 +42,7 @@ const Usercard = ({ className, userProps, setUserProps }) => {
         return (
             <div className={className}>
                 <form className="user-edit-form" onKeyDown={handleKeydown}>
-                    <img src={imageUrl}></img>
+                    <img className="user-image" src={imageUrl}></img>
                     <input type="file" onChange={handleImageUpload}/>
                     <div>Name:&nbsp;
                         <input type="text" value={name} onChange={(e) => setUserProps({ ...userProps, name: e.target.value })} />
@@ -67,7 +67,7 @@ const Usercard = ({ className, userProps, setUserProps }) => {
     else {
         return(
             <div className={className}>
-                <img src={imageUrl}></img>
+                <img className="user-image" src={imageUrl}></img>
                 <IconButton handleClick={handleClick} text="Edit" icon={penIcon} id="edit" />
                 <h2>{name}</h2>
                 <div className="location">{city}, {country}</div>

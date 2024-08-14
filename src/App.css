@@ -7,7 +7,8 @@ body {
     display: flex;
     width: 100vw;
     height: 100vh;
-    background-color: #fafafa;;
+    background-color: #fafafa;
+    background-image: linear-gradient(to bottom right, #fafafa 10%, #acc3c4 30%, #fafafa 70%, rgb(255, 255, 255) 80%, #fafafa);
     margin: 0;
     justify-content: center;
 }
@@ -33,6 +34,11 @@ body {
 
  .rand-user {
     min-width: 20vw;
+ }
+
+.user-image {
+    max-height: 128px;
+    height: auto;
  }
 
  .rand-user div {
