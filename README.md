@@ -26,3 +26,4 @@ cd prospectum-exercise
 npm i
 npm run dev
 ```
+Open the app on your browser. The app opens to http://localhost:5173/ by default. 
