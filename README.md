@@ -9,10 +9,14 @@ ASSIGNMENT:
 
 Write an application that fetches a random fake user’s data from the 
 RandomUser API.
+
 API URL -> GET https://randomuser.me/api/
+
 Store the response data in state and display the following 
-information from the response: 
-Name, Picture, Phone number, Country, City and Email. 
+information from the response:
+
+Name, Picture, Phone number, Country, City and Email.
+
 Add functionality to edit the displayed user’s data. 
 
 ## To run the app
