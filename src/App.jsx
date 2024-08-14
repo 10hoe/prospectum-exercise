@@ -38,7 +38,7 @@ function App() {
 
   return (
     <>
-      <Usercard userProps={userProps}/>
+      <Usercard userProps={userProps} setUserProps={setUserProps}/>
     </>
   )
 }
