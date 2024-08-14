@@ -15,6 +15,8 @@ function App() {
     email: "",
   })
 
+  const [editMode, setEditmode] = useState(false)
+
   const userDataHook = () => {
 
     const getData = async () => {
@@ -38,7 +40,7 @@ function App() {
 
   return (
     <>
-      <Usercard userProps={userProps} setUserProps={setUserProps}/>
+      <Usercard className="rand-user" userProps={userProps} setUserProps={setUserProps} editMode={editMode} setEditMode={setEditmode} />
     </>
   )
 }
