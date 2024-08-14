@@ -1,0 +1,73 @@
+:root {
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    display: flex;
+}
+
+body {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background-color: #fafafa;;
+    margin: 0;
+    justify-content: center;
+}
+
+.center-strip {
+    display: flex;
+    width: 90vw;
+    justify-content: center;
+ }
+
+ .rand-user {
+    margin-top: 5vw;
+    background-color: #ffffff;
+    padding: 20px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 
+              0 6px 20px rgba(0, 0, 0, 0.1);
+ }
+
+ h2 {
+    margin-bottom: 10px
+ }
+
+ .rand-user {
+    min-width: 20vw;
+ }
+
+ .rand-user div {
+    display: flex;
+    margin-top: 2px;
+    align-items: center;
+ }
+
+ .rand-user .location {
+    display: flex;
+    text-align: center;
+    margin-bottom: 6px;
+ }
+
+ .phone-icon, .email-icon {
+    margin-right: 4px
+ }
+
+ .icon-button {
+    float: right;
+    border: none;
+    background-color: #ffffff;
+ }
+
+ .icon-button:hover {
+    border: 1px solid #000000;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1), 
+              0 3px 10px rgba(0, 0, 0, 0.1);
+ }
+
+ input {
+    width: 100%;
+ }
+
+ #save {
+    float: left;
+    margin-top: 5px;
+ }

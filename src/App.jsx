@@ -5,7 +5,11 @@ import placeHolderImage from "../public/user-image-l.png"
 
 import Usercard from "./components/Usercard"
 
+import './App.css'
+
 function App() {
+
+  // A state that stores the current user information
   const [userProps, setUserProps] = useState({
     name: "",
     imageUrl: placeHolderImage,
@@ -14,8 +18,6 @@ function App() {
     city: "",
     email: "",
   })
-
-  const [editMode, setEditmode] = useState(false)
 
   const userDataHook = () => {
 
@@ -39,9 +41,9 @@ function App() {
   useEffect(userDataHook, [])
 
   return (
-    <>
-      <Usercard className="rand-user" userProps={userProps} setUserProps={setUserProps} editMode={editMode} setEditMode={setEditmode} />
-    </>
+    <div className='center-strip'>
+      <Usercard className="rand-user" userProps={userProps} setUserProps={setUserProps} />
+    </div>
   )
 }
 
