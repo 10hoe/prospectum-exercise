@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 
-import placeHolderImage from "../public/user-image-l.png"
+import placeHolderImage from "/user-image-l.png"
 
 import Usercard from "./components/Usercard"
 

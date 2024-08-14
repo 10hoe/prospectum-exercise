@@ -1,8 +1,8 @@
 import { useState } from "react"
 
-import penIcon from "../../public/pen-svgrepo-com.svg"
-import phoneIcon from "../../public/phone-call-svgrepo-com.svg"
-import emailIcon from "../../public/email-svgrepo-com.svg"
+import penIcon from "/pen-svgrepo-com.svg"
+import phoneIcon from "/phone-call-svgrepo-com.svg"
+import emailIcon from "/email-svgrepo-com.svg"
 
 import IconButton from "./IconButton"
 
