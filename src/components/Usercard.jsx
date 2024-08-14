@@ -25,12 +25,25 @@ const Usercard = ({ className, userProps, setUserProps }) => {
     // Toggle edit mode
     const handleClick = () => setEditMode(!editMode)
 
+    // Upload a new image if the user wants to change it
+    const handleImageUpload = (e) => {
+        const file = e.target.files[0];
+        if (file) {
+          const reader = new FileReader();
+          reader.onload = () => {
+            setUserProps({ ...userProps, imageUrl: reader.result });
+          };
+          reader.readAsDataURL(file);
+        }
+    }
+
     // Conditional rendering based on edit mode
     if(editMode){
         return (
             <div className={className}>
                 <form className="user-edit-form" onKeyDown={handleKeydown}>
                     <img src={imageUrl}></img>
+                    <input type="file" onChange={handleImageUpload}/>
                     <div>Name:&nbsp;
                         <input type="text" value={name} onChange={(e) => setUserProps({ ...userProps, name: e.target.value })} />
                     </div>
